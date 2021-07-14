@@ -74,7 +74,8 @@ function tienenMismaLongitud(str1, str2) {
   if (str1 === str2){
     return true;
   } else {
-    return false};
+    return false;
+  }
 }
 
 function menosQueNoventa(num) {
