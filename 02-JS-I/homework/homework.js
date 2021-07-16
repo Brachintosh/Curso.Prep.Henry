@@ -70,13 +70,9 @@ function sonIguales(x, y) {
 function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
-  // Tu código:
-  if (str1 === str2){
-    return true;
-  } else {
-    return false;
+   // Tu código:
+   return str1.length === str2.length;
   }
-}
 
 function menosQueNoventa(num) {
   // Devuelve "true" si el argumento de la función "num" es menor que noventa
@@ -169,7 +165,7 @@ function redondearHaciaArriba(num) {
 function numeroRandom() {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
-  retunr Math.random();
+  return Math.random();
 }
 
 function esPositivo(numero) {
@@ -244,13 +240,14 @@ function esVocal(letra){
   //Verificar si el usuario ingresó un string de más de un carácter y, en ese caso, informarle 
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   //Escribe tu código aquí:
-  if (letra.lenght > 1){
-    return "Dato incorrecto"
+  
+  if(letra.length > 1) {
+    return "Dato incorrecto";
   }
-  if (letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u"){
-    return "Es vocal"
+  if(letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u"){
+    return "Es vocal";
   }
-} 
+}
 
 
 
