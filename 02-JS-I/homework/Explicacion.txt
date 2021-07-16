@@ -1,0 +1,23 @@
+En un archivo de texto separado que debes crear, escribe explicaciones de los siguientes conceptos como si se lo estuvieras explicando a un niño de 12 años. Hacer esto te ayudará a descubrir rápidamente cualquier agujero en tu comprensión.
+Variables
+Strings
+Funciones (argumentos, return)
+Declaraciones if
+Valores booleanos (true, false).
+
+Variables: Una variable es una unidad de datos que puede ir cambiando con el decorrer del tiempo.
+Almacena información de un determinado tipo de datos, pueden ser números o carácteres.
+
+Strings: Un String (o cadena de caracteres) se utiliza para almacenar y representar textos.
+
+Funciones: Una función es un conjunto de lineas de código, destinada a resolver/calcular una
+tarea específica. Cuando una función es invocada, ésta pasa al frente hasta terminar su tarea.
+
+Declaraciones if: Un 'IF'se utiliza para decidir entre dos opciones, si se cumple la condición
+(será Verdadera o TRUE) se ejecutará cierta respuesta. En caso contrario, la respuesta será Falso
+o FALSE, y se proseguirá a ejecutar otra bloque de código para terminar la declaración.
+
+Valores booleanos: Un valor booleano es un dato lógico, el cual solo puede tener los valores:
+True o False.
+
+}
