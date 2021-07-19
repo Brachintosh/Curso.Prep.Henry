@@ -1,0 +1,70 @@
+En un archivo de texto separado que debes crear, escribe explicaciones de los siguientes conceptos como
+si se lo estuvieras explicando a un niño de 12 años. Hacer esto te ayudará a descubrir rápidamente
+cualquier agujero en tu comprensión.
+
+for
+
+&&, ||, !
+
+for:
+    For es una expresión de bucle (loop), que da la posibilidad de evaluar expresiones una y otra vez hasta
+    conseguir devolver el valor buscado en la sintaxis de la expresion, o se detiene después de un tiempo al
+    no terminar el ciclo con la respuesta esperada.
+    Éstos bucles 'for'están compuestos por 3 partes, son similares a la instrucción 'if', pero un poco más compleja.
+    Primero, la plabra clave 'for', seguida de paréntesis y luego abre y cierra llaves. 
+    Dentro de los paréntesis, necesitaremos tres cosas para realizar un bucle for.
+    Para empezar, se declara una variable; sobre la cual iremos a repetir el bucle buscando un resultado.
+    Luego, viene una expreseión condicional, significa que el ciclo continuará repitiendose hasta que esta declaración
+    sea 'false'.
+    Por último, necesitamos incrementar el valor de nuestra variable inicial.
+    Siempre estas tres declaraciones van a ir separadas por ";" (punto y coma).
+
+Ejemplo:
+
+for(let i = 0   ; i < 20    ; i++){
+    console.log(i);
+}
+
+Aqui, inicialmente tenemos i = 0; el ciclo se va a ejecutar y al finalizar, se aumenta el valor de 'i' en +1. El bucle for
+evaluará la expresión condicional. Si es 'true', continua ejecutándose, si es 'false' va a dejar de funcionar.
+En este caso, recibiríamos de respuesta los números del 0 - 19.
+
+- OPERADORES LÓGICOS -
+
+'&&': (AND / " Y ")
+     Éste operador lógico evaluará ambas expresiones y devolverá 'verdadero'si LAS DOS expresiones son 'TRUE'.
+     Si uno (o ambos) de ellos es 'false', devolverá FALSE.
+
+     [[ En una declaración &&, si la primera expresión es false, la segunda expresión no se evaluará porque AMBAS
+     expresiones deben ser true.]]
+
+if (100> > 10 && 10 === 10){
+    console.log('Las dos son ciertas, se ejecutará el código');
+}
+
+|| : (OR / " Ó ")
+    El siguiente operador es OR, está escrito con dos barras verticales ( || ). Éste dertermina si una de las expresiones
+    colocadas es TRUE. Devolverá 'true' si una (o ambas) de las expresiones es TRUE.
+    Por otro lado, devolverá FALSE si AMBAS expresiones son 'false'.
+
+    [[ Si la primera expresión es verdadero, la segunda no se evaluará porque solo debe haber una declaración verdadero para
+    cumplir con los requisitos del operador.]]
+
+if (100 > 10 || 10 ===10){
+    console.log('Si ambas son ciertas, este codigo se ejecutará');
+}
+
+! : (NOT / "NO")
+    Está escrito como un solo signo de exclamacióm ( ! ). Hemos visto usar este operador para determinar igualdades (!==)
+    NOT devolverá el valor booleano opuesto de lo que se le pasa.
+
+if (!false){
+    console.log('devolverá TRUE);
+}
+
+if (!(1 ===1)){
+    console.log('Devolverá True por ser lo contrario de FALSE');
+}
+
+    [[ Usamos los paréntesis para evaluar PRIMERO lo que estaba dentro de los paréntesis, luego aplicamos el operador !. 
+    Podemos ajustar cualquier expresión entre paréntesis y se evaluará antes de evaluar la expresión como un todo.]]
