@@ -1,0 +1,114 @@
+- Arrays - (Matrices / Arreglos)
+
+Las Matrices se utilizan para formar contenedores de almacenamiento para colecciones de Datos.
+Para construir una matríz, primero debemos declarar una variable y establecerla en corchetes [].
+Luego podemos agregarle a este contenedor (siempre separados por comas ",")ya sea Strings,
+Números o Booleanos como se desee. Y también podremos acceder a éstos elementos cuando sea necesario.
+
+ej.
+
+const nombreMascotas = ['Firulais', 'Hakuna', 'Ohana'];
+
+* Al igual que con el tipo de Dato Strings, tiene un método incorporado llamado ".lenght", éste también
+está presente en la matríz, ".lenght" permite contar a los elementos contenidos en la matríz (no cuenta 
+los Caracteres)
+
+ej.
+
+const nombreMascotas = ['Firulais', 'Hakuna', 'Ohana'];
+console.log(nombreMascotas.lenght);
+
+//< 3
+
+* Para acceder a un elemento dentro de una matríz necesitamos llamarlo por su posición en la matríz. Los
+elementos reciben una posición numérica (o Indice), siempre de acuerdo con su ubicación en la matríz,
+respetando el orden creciente. El orden numérico de la matríz SIEMPRE comienza en cero (0), por lo tanto,
+el primer elemento será el 0 en el Indice, el segundo elemento será el 1 del Indice y asi sucesivamente 
+hasta completar toda la lista de elementos que componen a una matríz.
+
+ej.
+
+const nombreMascotas = ['Firulais', 'Hakuna', 'Ohana'];
+console.log(nombreMascotas[2]);
+//< 'Ohana'
+
+- Se accede al elemento deseado colocando el nombre de la matriz deseada, seguido del número correspondiente 
+del elemento SIEMPRE entre corchetes [].
+
+* Se puede acceder directamente al ÚLTIMO elemento de una matriz sin saber el número correspondiente del Indice
+para éso usaremos la propiedad de longitud (.lenght) de la siguiente forma:
+
+ej.
+
+const nombreMascotas = ['Firulais', 'Hakuna', 'Ohana'];
+console.log(nombreMascotas[nombreMascotas.lenght -1]);
+//< 'Ohana'
+
+- ASIGNACIÓN -
+    Es posible ASIGNAR  y RE-ASIGNAR cualquier índice en la matríz usando [NRO INDICE] y un '=' (igual).
+
+ej.
+
+const nombreMascotas = ['Firulais', 'Hakuna', 'Ohana'];
+nombreMascotas[0] = 'Pepa';
+console.log(nombreMascotas);
+//< ['Pepa', 'Firulais', 'Hakuna', 'Ohana']
+
+    Por otro parte, es posible agregar un elemento directamente AL FINAL de una matríz, incremtenando su
+    longitud en 1.
+
+ej.
+
+const nombreMascotas = ['Pepa', 'Firulais', 'Hakuna', 'Ohana'];
+nombreMascotas.push(Chispita');
+console.log(nombreMascotas);
+//< ['Pepa', 'Firulais', 'Hakuna', 'Ohana', 'Chispita']
+
+    Finalmente, existe la posibilidad de ELIMINAR al ÚLTIMO ELEMENTO de una matríz, disminuyendo su
+    valor en 1 de su longitud. Usando ".pop"
+
+ej.
+
+const nombreMascotas = ['Pepa', 'Firulais', 'Hakuna', 'Ohana', 'Chispita'];
+nombreMascotas.pop();
+console.log(nombreMascotas);
+//< ['Pepa', 'Firulais', 'Hakuna', 'Ohana']
+
+- ".unshift" y ".shift" -
+    UNSHIFT y SHIFT son parecidos a ".pop" y ".push", excepto que operan UNICAMENTE en el PRIMER 
+    ELEMENTO de una matríz.
+
+    .unshift(item)  --> COLOCARÁ un nuevo elemento en la 1era posición de la matriz (nro 0  del INDICE).
+
+    .shift()  --> ELIMINARÁ ÚNICAMENTE al PRIMER ELEMENTO de una matríz.
+
+ej.
+
+const nombreMascotas = ['Pepa', 'Firulais', 'Hakuna', 'Ohana'];
+nombreMascotas.unshift('Wagner');
+console.log(nombreMascotas);
+//< ['Wagner', 'Pepa', 'Firulais', 'Hakuna', 'Ohana']
+
+nombreMascotas.shift();
+console.log(nombreMascotas);
+//< ['Pepa', 'Firulais', 'Hakuna', 'Ohana']
+
+** LAS MATRICES EN .JS PUEDEN CONTENER MULTIPLES TIPOS DE DATOS DIFERENTES EN LA MISMA MATRIZ **
+
+- BUCLES "for" en ARRAYS - 
+    En la mayoría de los casos, los bucles "for"se utilizan para testear sobre todos los elementos dentro
+    de una matríz, y usando la técnica de acceso al Indice (INDEX ACCESS TECHNIQUE), podremos acceder a
+    cada elemento contenido en la matríz.
+    Para hacer esto usaremos ".lenght", el cual será nuestro punto de parada para el ciclo del bucle.
+
+ej.
+
+const nombreMascotas = ['Pepa', 'Firulais', 'Hakuna', 'Ohana'];
+for (let i = 0; i < nombreMascotas.lenght; i++){
+    console.log(nombreMascotas[i]);
+}
+//< 'Pepa'
+    'Firulais''
+    'Hakuna''
+    'Ohana'
+    
