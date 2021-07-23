@@ -41,7 +41,7 @@ para éso usaremos la propiedad de longitud (.lenght) de la siguiente forma:
 ej.
 
 const nombreMascotas = ['Firulais', 'Hakuna', 'Ohana'];
-console.log(nombreMascotas[nombreMascotas.lenght -1]);
+console.log(nombreMascotas[nombreMascotas.lenght - 1]);
 //< 'Ohana'
 
 - ASIGNACIÓN -
@@ -60,7 +60,7 @@ console.log(nombreMascotas);
 ej.
 
 const nombreMascotas = ['Pepa', 'Firulais', 'Hakuna', 'Ohana'];
-nombreMascotas.push(Chispita');
+nombreMascotas.push('Chispita');
 console.log(nombreMascotas);
 //< ['Pepa', 'Firulais', 'Hakuna', 'Ohana', 'Chispita']
 
