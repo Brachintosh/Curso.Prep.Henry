@@ -57,29 +57,23 @@ function agregarStringInvertida() {
     //   Edad: 22,
     //   Domicilio: 'Saavedra 123'
     //  }
-    function Brian(opciones) {
-      this.nombre = opciones.nombre;
-      this.apellido = opciones.apellido;
-      this.edad = opciones.edad;
-      this.domicilio = opciones.domicilio;
-    }
 
   class Persona {
     constructor(nombre, apellido, edad, domicilio) {
       // Crea el constructor:
-      this.nombre = nombre,
-      this.apellido = apellido,
-      this.edad = edad,
-      this.domicilio = domicilio,
-      this.detalle = function() {
-        return{
-          Nombre: this.nombre,
-          Apellido: this.apellido,
-          Edad: this.edad,
-          Domicilio: this.domicilio
-        }
+      this.nombre=nombre;
+      this.apellido=apellido;
+      this.edad=edad;
+      this.domicilio=domicilio;
       }
-    };
+      detalle(){
+        return{
+        nombre: this.nombre,
+        apellido: this.apellido,
+        edad: this.edad,
+        domicilio: this.domicilio
+        }
+    }
   }
 
 function crearInstanciaPersona(nombre, apellido, edad, dir) {
