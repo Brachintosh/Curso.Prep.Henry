@@ -1,0 +1,99 @@
+- Funciones Callback - 
+    JavaScript es un lenguaje que trata a las Funciones como "First Class".
+    Ésto significa que las funciones se pueden pasar como argumentos a otra funciones,
+    retornarlas como resultado de una función, y , hasta, guardarlos en variables
+    u otras estructuras de datos.
+    Estas funciones pueden llamarse en cualquier momento.
+
+- Callback -> 'cb'
+    Cuando pasamos una función como ARGUMENTO a otra función, ésa recibe el nombre
+    de "callback".
+
+function decirHola (usuario) {
+    return "Hola " + usuario + "!";
+}
+function decirAdios (usuario) {
+    return "Adiós "+ usuario + "!";
+}
+
+function crearSaludo (usuario, cb) {
+    return cb(usuario);
+}
+
+< crearSaludo('Dan', decirHola) // > 'Hola, Dan!''
+< crearSaludo('Dan', decirAdios) // > 'Adiós, Dan!'
+
+- Métodos de Arrays -
+    Ahora, imaginemos que queremos invocar una función en todos los elementos de
+    un arreglo.
+    Si bien, podemos usar la programación IMPERATIVA (sin realizar 'callbacks'), existe la
+    posibilidas de hacerlo mediante programación DECLARATIVA (usando 'callbacks').
+
+    - Método "forEach":
+    Ejecuta la función indicada UNA VEZ POR CADA ELEMENTO del arreglo, hasta llegar al final
+    del arreglo.
+
+    // [ sin callback ]
+    var alumnos = ['mati', 'leo', 'juan', 'lucas', 'fábio'];
+    for(var i = 0; i < alumnos.length; i ++){
+        console.log(alumnos[i]);
+    }
+
+    // [ con callback ]
+    var alumnos = ['mati', 'leo', 'juan', 'lucas', 'fábio'];
+    alumnos.forEach(function(elemento, indice){
+        console.log(elemento);
+    })
+
+    - Método ".reduce":
+    Ejecutará un bucle en la matríz con la finalidad de reducir cada elemento en un elemento nuevo (acumulador)
+    que se devuelve. El primer argumento acepta un callback que toma dos argumentos, en el primero un acumulador
+    (el resultado del método de reducción hasta ahora en la iteración), y el segundo es el elemento en el que se 
+    encuentra el iterador actualmente. 
+    El callback debe contener siempre una declaración de devolución ("return"). ".reduce" también toma un segundo
+    argumento opcional, que sería el acumulador de ARRANQUE("starting accumulator"). Si no se le suministra éste 
+    acumulador de arranque, la reducción comenzará en el primer elemento de la matríz.
+    ".reduce" siempre devolverá el acumulador cuando termine de recorrer los elementos.
+    Como resultado se obtiene un único valor.
+
+    // [ sin callbacks ]
+    var nums = [1,2,3,4,5,6,7];
+    var suma = 0;
+    for(var i=0; i<nums.length; i++) {
+        suma = suma + nums[i];
+    }
+
+    // [ con callbacks ]
+    var nums = [1,2,3,4,5,6,7];
+    var sumaReduce = nums.reduce(function(acumulador, elemento){
+        return acumulador+elemento;
+    }, 0);
+
+    Este cero es el segundo parámetro, indica el valor con el que el ACUMULADOR va a empezar a iterar.
+    Por defecto, el acumulador siempre empieza en cero.
+    Para multiplicaciones el número UNO es el operador neutro del cual empezar.
+
+    - Método ".map":
+    Éste método se usa cuando queremos cambiar cada elemento de una matríz de la misma manera.
+    ".map" toma una devolución de llamada como único argumento. Al igual que el método "forEach", el callback
+    tiene el elemento y el índice de argumentos opcionales. A diferencia de ".reduce", ".map" devolverá
+    TODA la matríz.
+    
+    String.prototype.capitalize = function(){
+        return this.charAt(0).toUpperCase()+this.slice(1)
+    };
+
+    [ sin callbacks ]
+    var alumnos = ['mati', 'leo', 'juan', 'lucas', 'fábio'];
+    
+    var nuevoArray = [];
+    for(var i=0; i<alumnos.length; i++){
+        nuevoArray.push(alumnos[i].capitalize());
+    }
+
+    [ con callbacks ]
+    var alumnos = ['mati', 'leo', 'juan', 'lucas', 'fábio'];
+    var nuevosAlumnos = alumnos.map(function(elemento, indice){
+        return elemento.capitalize();
+    })
+    
